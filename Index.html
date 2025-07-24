@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Coutable Antonin" />
+        <meta name="theme-color" content="#223" />
+        <link rel="icon" href="Images/Logo.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="Styles/Style-principal.css" />
+        <title>Trouve ton film</title>
+    </head>
+    <body id="arriere-plan-poster">
+        <main id="main-avec-boutons">
+            <nav id="barre-du-haut">
+                <button class="bouton-navigable" title="Bibliothèque">
+                    <img src="Images/SVG/Bibliothèque.svg" alt="Icône Bibliothèque">
+                </button>
+                <button class="bouton-navigable" id="bouton-vus" title="Déjà vus">Vus</button>
+                <button class="bouton-navigable" title="Accueil">
+                    <img src="Images/SVG/Accueil.svg" alt="Icône Accueil">
+                </button>
+            </nav>
+
+            <section>
+                <img id="affiche"
+                    alt="Affiche du film" />
+            </section>
+
+            <nav id="barre-du-bas">
+                <button class="petit-bouton bouton-navigable" title="Retour">
+                    <img src="Images/SVG/Retour.svg" alt="Icône Retour">
+                </button>
+                <button class="bouton-navigable" id="aime_pas" title="Je n'aime pas" onclick="aime_pas()">
+                    <img src="Images/SVG/Je n'aime pas.svg" alt="Icône Je n'aime pas">
+                </button>
+                <button class="bouton-navigable" id="aime" title="J'aime" onclick="aime()">
+                    <img src="Images/SVG/J'aime.svg" alt="Icône J'aime">
+                </button>
+                <button class="petit-bouton bouton-navigable" title="Informations">
+                    <img src="Images/SVG/Informations.svg" alt="Icône Informations">
+                </button>
+            </nav>
+        </main>
+
+        <script src="Scripts/Prépotent.js"></script>
+        <script src="Scripts/Requêtes.js"></script>
+    </body>
+</html>

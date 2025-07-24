@@ -1,0 +1,187 @@
+/* 🧱 Structure générale 🧱 */
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #22222a;
+}
+
+main {
+    width: 67.5vh;
+    height: 90vh;
+    overflow: hidden;
+    border-radius: 3vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #223;
+    box-shadow: 0 0 4vh #000c;
+
+    animation: apparition 0.6s ease-in-out;
+}
+
+/* 🎞️ Animation 🎞️ */
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 🔘 Composants 🔘 */
+
+button {
+    display: block;
+    padding: 1vh;
+    border: none;
+    border-radius: 30px;
+    border: 1px solid #fff2;
+
+    font-size: 2.2em;
+    font-weight: bold;
+    color: white;
+
+    background-color: #01b4e4;
+    cursor: pointer;
+
+    box-shadow: 0 0 20px #01b4e4aa;
+    transition: all 0.2s ease-in-out;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+nav {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    background-color: #0008;
+    border: 1px solid #fff2;
+    overflow: hidden;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🎯 Classes 🎯 */
+
+.bouton-navigable {
+    width: 8.3vh;
+    height: 8.3vh;
+    padding: 1.8vh;
+    background-color: #2e2e3e;
+    border: 1px solid #fff2;
+    cursor: pointer;
+    border-radius: 2vh;
+    box-shadow: 0 0 10px #000c;
+}
+
+.petit-bouton {
+    width: 6.1vh;
+    height: 6.1vh;
+}
+
+/* 🏷️ IDs spécifiques 🏷️ */
+
+#arriere-plan-poster {
+    background: radial-gradient(circle at center, #000a, #000f);
+    background-size: cover;
+    background-position: center;
+}
+
+#main-avec-boutons {
+    display: grid;
+    grid-template-rows: 12% 1fr 12%;
+    align-items: initial;
+    justify-content: initial;
+}
+
+#barre-du-haut {
+    grid-template-columns: 1fr 2fr 1fr;
+    border-bottom: 1px solid #444;
+    border-radius: 3vh 3vh 0 0;
+}
+
+#barre-du-bas {
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    border-top: 1px solid #444;
+    border-radius: 0 0 3vh 3vh;
+}
+
+#affiche {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 90%;
+    width: auto;
+    overflow: hidden;
+
+    border-radius: 2.4vh;
+    border: 1px solid #000;
+    box-shadow: 0 0 30px #000d;
+
+    background-color: #111;
+    z-index: 1;
+}
+
+#aime {
+    background-color: #00c853;
+    box-shadow: 0 0 12px #00c853aa;
+}
+
+#aime_pas {
+    background-color: #d50000;
+    box-shadow: 0 0 12px #d50000aa;
+}
+
+#bouton-vus {
+    width: 14vh;
+    height: 5vh;
+    font-size: 2.4vh;
+    padding: 0.5vh;
+    border-radius: 3vh;
+}
+
+/* ✨ Effets (hover, active) ✨ */
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #01b4e4ee;
+    transition: all 0.1s ease-in-out;
+}
+
+button:active {
+    transform: scale(0.97);
+    filter: brightness(0.9);
+    transition: all 0.1s ease-in-out;
+}
+
+.bouton-navigable:hover {
+    box-shadow: 0 0 15px #0003;
+}
+
+.bouton-navigable:active {
+    box-shadow: 0 0 15px #5555;
+}
