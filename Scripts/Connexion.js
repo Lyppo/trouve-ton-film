@@ -16,7 +16,7 @@ async function connexion() {
         return;
     }
 
-    const response = await fetch("https://connexion-api-tmdb.antodu72210.workers.dev/demande_de_jeton/index.html", {
+    const response = await fetch("https://connexion-api-tmdb.antodu72210.workers.dev/demande_de_jeton/trouve-ton-film", {
         method: "GET",
         headers: {
             "Accept": "application/json"
