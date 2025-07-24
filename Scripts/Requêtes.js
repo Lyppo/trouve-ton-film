@@ -40,7 +40,7 @@ async function début() {
         }
     }
     else {
-        window.location.replace("/trouve-ton-film/connexion.html");
+        window.location.replace("/trouve-ton-film/Connexion.html");
     }
 }
 
