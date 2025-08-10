@@ -10,6 +10,14 @@
         <title>Trouve ton film</title>
     </head>
     <body id="arriere-plan-poster">
+        <div id="interface-du-compte">
+            <div id="conteneur-pour-profil">
+                <button id="connexion" class="petit-text">Se connecter</button>
+                <img id="photo-de-profil" alt="photo de profil">
+                <button id="déconnexion" class="petit-text">Se déconnecter</button>
+            </div>
+        </div>
+
         <main id="main-avec-boutons">
             <nav id="barre-du-haut">
                 <button class="bouton-navigable" title="Bibliothèque">
@@ -23,17 +31,18 @@
 
             <section>
                 <img id="affiche"
+                    src="Images/Default-Poster.png"
                     alt="Affiche du film" />
             </section>
 
             <nav id="barre-du-bas">
-                <button class="petit-bouton bouton-navigable" title="Retour" onclick="retour()">
+                <button class="petit-bouton bouton-navigable" title="Retour">
                     <img src="Images/SVG/Retour.svg" alt="Icône Retour">
                 </button>
-                <button class="bouton-navigable" id="aime_pas" title="Je n'aime pas" onclick="aime_pas()">
+                <button class="bouton-navigable" id="aime_pas" title="Je n'aime pas">
                     <img src="Images/SVG/Je n'aime pas.svg" alt="Icône Je n'aime pas">
                 </button>
-                <button class="bouton-navigable" id="aime" title="J'aime" onclick="aime()">
+                <button class="bouton-navigable" id="aime" title="J'aime">
                     <img src="Images/SVG/J'aime.svg" alt="Icône J'aime">
                 </button>
                 <button class="petit-bouton bouton-navigable" title="Informations">
@@ -42,7 +51,7 @@
             </nav>
         </main>
 
-        <script src="Scripts/Prépotent.js"></script>
+        <script src="Scripts/Principal.js"></script>
         <script src="Scripts/Requêtes.js"></script>
     </body>
 </html>

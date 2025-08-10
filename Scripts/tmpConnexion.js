@@ -1,7 +1,7 @@
 async function connexion() {
 
     if (document.cookie.includes("mon_token")) {
-        window.location.href = "/";
+        window.location.replace(window.location.href.replace("Connexion", ""));
         return;
     }
 
@@ -16,7 +16,7 @@ async function connexion() {
         return;
     }
 
-    const response = await fetch("https://connexion-api-tmdb.antodu72210.workers.dev/demande_de_jeton/trouve-ton-film", {
+    const response = await fetch("https://connexion-api-tmdb.antodu72210.workers.dev/demande_de_jeton/" + window.location.href, {
         method: "GET",
         headers: {
             "Accept": "application/json"

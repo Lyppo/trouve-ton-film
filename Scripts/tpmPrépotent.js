@@ -1,4 +1,5 @@
 let MON_TOKEN = "Non initialisé";
+let connecté = false;
 
 let page = 0;
 let element = 20;
@@ -35,7 +36,10 @@ async function retour() {
             }
         };
 
-        const reponse = await fetch("https://api.themoviedb.org/3/movie/popular?language=fr-FR&page=" + page, options);
+        let reponse;
+
+        if (connecté) reponse = await fetch("https://api.themoviedb.org/3/movie/popular?language=fr-FR&page=" + page, options);
+        else reponse = await fetch("https://invite-api-tmdb.antodu72210.workers.dev/Popular?language=en-US&page=" + page, options);
         data = await reponse.json();
     }
 
@@ -61,7 +65,10 @@ async function next() {
             }
         };
 
-        const reponse = await fetch("https://api.themoviedb.org/3/movie/popular?language=fr-FR&page=" + page, options);
+        let reponse;
+
+        if (connecté) reponse = await fetch("https://api.themoviedb.org/3/movie/popular?language=fr-FR&page=" + page, options);
+        else reponse = await fetch("https://invite-api-tmdb.antodu72210.workers.dev/Popular?language=en-US&page=" + page, options);
         data = await reponse.json();
     }
 

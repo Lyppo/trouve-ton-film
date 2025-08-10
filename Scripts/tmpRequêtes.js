@@ -34,13 +34,23 @@ async function début() {
             document.cookie = "demande_de_jeton=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 
             MON_TOKEN = data.access_token;
+            connecté = true;
         }
         else {
             console.error("Erreur " + response.status + " : " + await response.text());
         }
     }
     else {
-        window.location.replace("/trouve-ton-film/Connexion.html");
+        connecté = false;
+
+        let connexion = document.createElement('button');
+        connexion.textContent = "Connexion";
+        connexion.style.position = 'fixed';
+        connexion.style.top = '25px';
+        connexion.style.right = '25px';
+        connexion.style.zIndex = '3';
+        connexion.addEventListener('click', () => {window.location.replace(window.location.href + "Connexion.html");});
+        document.body.appendChild(connexion);
     }
 }
 

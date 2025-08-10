@@ -102,7 +102,43 @@ section {
     height: 6.1vh;
 }
 
+.petit-text {
+    font-size: 1.6vh;
+}
+
 /* 🏷️ IDs spécifiques 🏷️ */
+
+#interface-du-compte {
+    display: none;
+    position: fixed;
+    top: 2.5vh;
+    right: 2.5vh;
+    width: 20vw;
+    max-width: 22vh;
+    border: 1px solid gray;
+    box-shadow: black 0 0 1vh;
+    border-radius: 1vh;
+}
+
+#conteneur-pour-profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 3vh;
+}
+
+#connexion {
+    display: none;
+}
+
+#déconnexion {
+    display: none;
+}
+
+#photo-de-profil {
+    display: none;
+}
 
 #arriere-plan-poster {
     background: radial-gradient(circle at center, #000a, #000f);
